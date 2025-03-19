@@ -56,7 +56,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative h-full flex flex-col justify-center items-center text-center px-4 md:px-8">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 transition-all duration-700 transform translate-y-0 opacity-100">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-700 transform translate-y-0 opacity-100">
           {slides[currentSlide].title}
         </h1>
         <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl transition-all duration-700 delay-300 transform translate-y-0 opacity-100">

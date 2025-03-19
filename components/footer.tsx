@@ -9,8 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  ">
           {/* Company Info */}
           <div>
-          <Image src="/images/logo2.png" alt="Vestis Logo" width={250} height={250} className="invert" />
-          <p className="text-gray-400 mb-3">
+            <div>
+              <Link href="/home">
+                <Image src="/images/logo1.png" alt="Vestis Logo" width={250} height={250} className="invert" />
+              </Link>
+            </div>
+          <p className="text-gray-400 mt-3 mb-3">
               Leading textile manufacturer providing premium fabrics and innovative solutions since 1995.
             </p>
             <div className="flex space-x-4">
@@ -45,12 +49,12 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  Sustainability
+                  Vestis Textile
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
-                  X
+                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
+                  Sustainability
                 </Link>
               </li>
               <li>
