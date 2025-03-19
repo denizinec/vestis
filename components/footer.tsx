@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div>
               <Link href="/home">
-                <Image src="/images/logo1.png" alt="Vestis Logo" width={250} height={250} className="invert" />
+                <Image src="/images/logoo1.png" alt="Vestis Logo" width={250} height={250} className="invert" />
               </Link>
             </div>
           <p className="text-gray-400 mt-3 mb-3">
