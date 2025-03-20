@@ -111,14 +111,14 @@ const Footer = ({ dict }: Props) => {
             <form className="flex flex-col space-y-2">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder={dict.navigation.email}
                 className="px-4 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white/20"
               />
               <button
                 type="submit"
                 className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-gray-200 transition-colors"
               >
-                Subscribe
+                {dict.navigation.subscribe}
               </button>
             </form>
           </div>
@@ -135,9 +135,7 @@ const Footer = ({ dict }: Props) => {
             <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
               {dict.navigation["terms-conditions"]}
             </Link>
-            <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Sitemap
-            </Link>
+    
           </div>
         </div>
       </div>
