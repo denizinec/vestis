@@ -1,8 +1,19 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { useParams } from 'next/navigation';
+import { Locale } from '@/lib/types';
+import { useTranslation } from './TranslationWrapper';
 
-const Footer = () => {
+type Props = {
+  dict: any;
+}
+
+const Footer = ({ dict }: Props) => {
+  const { lang } = useParams() as { lang: Locale };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-12 py-8 flex flex-col justify-start">
@@ -10,7 +21,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div>
-              <Link href="/home">
+              <Link href={`/${lang}/home`}>
                 <Image src="/images/logoo1.png" alt="Vestis Logo" width={250} height={250} className="invert" />
               </Link>
             </div>
@@ -35,31 +46,32 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-1">{dict.navigation.menu}</h3>
+            <hr className="border-gray-500 mb-4" />
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
+                <Link href={`/${lang}/about`} className="text-gray-400 hover:text-white transition-colors">
+                  {dict.navigation.about}
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                  Design & Production
+                <Link href={`/${lang}/design-production`} className="text-gray-400 hover:text-white transition-colors">
+                  {dict.navigation["design-production"]}
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  Vestis Textile
+                <Link href={`/${lang}/vestis-textile`} className="text-gray-400 hover:text-white transition-colors">
+                  {dict.navigation.vestis}
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  Sustainability
+                <Link href={`/${lang}/sustainability`} className="text-gray-400 hover:text-white transition-colors">
+                  {dict.navigation.sustainability}
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-400 hover:text-white transition-colors">
-                  Contact Us
+                <Link href={`/${lang}/contact`} className="text-gray-400 hover:text-white transition-colors">
+                  {dict.navigation.contact}
                 </Link>
               </li>
             </ul>
@@ -67,30 +79,34 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-1">{dict.navigation.contactContent}</h3>
+            <hr className="border-gray-500 mb-4" />
+
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="text-gray-400 mr-2 mt-1" />
                 <span className="text-gray-400">
-                  123 Textile Avenue, Istanbul, Turkey
+                  Şenlikköy Mahallesi, Harman Sk. No:19/0 Bakırköy/İstanbul
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-gray-400 mr-2" />
-                <span className="text-gray-400">+90 212 123 4567</span>
+                <span className="text-gray-400">+90 212 772 1600</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-gray-400 mr-2" />
-                <span className="text-gray-400">info@textilecompany.com</span>
+                <span className="text-gray-400">info@vestistextile.com</span>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+            <h3 className="text-lg font-semibold mb-1">{dict.navigation.subscribe}</h3>
+            <hr className="border-gray-500 mb-4" />
+
             <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest updates and offers.
+              {dict.navigation.newsletter}
             </p>
             <form className="flex flex-col space-y-2">
               <input
@@ -110,14 +126,14 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Textile Company. All rights reserved.
+            © {new Date().getFullYear()} Vestis Textile. {dict.navigation.rights}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Privacy Policy
+              {dict.navigation.kvkk}
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Terms of Service
+              {dict.navigation["terms-conditions"]}
             </Link>
             <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">
               Sitemap

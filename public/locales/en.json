@@ -1,15 +1,21 @@
 {
-    "home": "HOME",
-    "about": "ABOUT US",
-    "processes": "PROCESSES",
-    "sustainability": "SUSTAINABILITY",
-    "technology": "TECHNOLOGY",
-    "contact": "CONTACT",
-    "aboutContent": "We are a textile company...",
-    "contactContent": "Get in touch with us...",
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "design-production": "Design & Production",
+    "vestis": "Vestis Textile",
+    "sustainability": "Sustainability",
+    "contact": "Contact Us",
+    "menu": "Menu",
+    "aboutContent": "We are a textile company",
+    "contactContent": "Get in touch with us",
     "rights": "All rights reserved.",
     "quality-sustainability": "Quality & Sustainability",
     "kvkk": "Personal Data Protection",
     "information-security": "Information Security",
-    "cookies": "Cookies"
-  } 
+    "terms-conditions": "Terms & Conditions",
+    "cookies": "Cookies",
+    "newsletter": "Stay updated with our latest news and offers, we will reach you.",
+    "subscribe": "Subscribe"
+} 
+}

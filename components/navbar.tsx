@@ -1,20 +1,31 @@
-"use client";
+'use client'
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { useParams, usePathname } from 'next/navigation';
+import { Locale } from '@/lib/types';
 
-const Navbar = () => {
+type Props = {
+  dict: any;
+  lang: string;
+}
+
+const Navbar = ({ dict }: Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
 
+  const pathname = usePathname();
+  const { lang } = useParams() as { lang: Locale };
+  const path = pathname.split(`/${lang}`)[1] || '/';
+
   useEffect(() => {
+
     // Check if we're on the home page
-    const path = window.location.pathname;
-    const homePage = path === '/' || path === '/home';
+    const homePage = path === `/${lang}/home`;
     setIsHomePage(homePage);
     
     const handleScroll = () => {
@@ -32,12 +43,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'HOME', href: '/home' },
-    { name: 'ABOUT US', href: '/about' },
-    { name: 'DESIGN & PRODUCTION', href: '/design-production' },,
-    { name: 'VESTIS TEXTILES', href: '/vestis-textile' },
-    { name: 'SUSTAINABILITY', href: '/sustainability' },
-    { name: 'CONTACT US', href: '/contact' },
+    { name: `${dict.navigation.home}`, href: `/${lang}/home` },
+    { name: `${dict.navigation.about}`, href: `/${lang}/about` },
+    { name: `${dict.navigation["design-production"]}`, href: `/${lang}/design-production` },,
+    { name: `${dict.navigation.vestis}`, href: `/${lang}/vestis-textile` },
+    { name: `${dict.navigation.sustainability}`, href: `/${lang}/sustainability` },
+    { name: `${dict.navigation.contact}`, href: `/${lang}/contact` },
   ];
 
   return (
@@ -49,10 +60,14 @@ const Navbar = () => {
           : 'bg-black/90 backdrop-blur-sm'
       )}
     >
+      
       <div className="container mx-auto px-4 py-4 flex items-center justify-between h-40 ">
+        
         <Link href="/home" className="relative z-10">
           <Image className='invert' src="/images/logoo2.png" alt="VESTIS" width={250} height={250} />
         </Link>
+
+        
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -60,14 +75,29 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white text-sm font-medium hover:text-gray-300 transition-colors"
+              className="text-white text-sm font-medium hover:text-gray-300 transition-colors uppercase"
             >
               {link.name}
             </Link>
           ) : null)}
             
+            
         </nav>
-
+        <div className="flex space-x-2 text-sm text-white">
+            <Link 
+              href={`/tr${path}`}
+              className={`hover:text-black ${lang === 'tr' ? 'font-bold' : ''}`}
+            >
+              TR
+            </Link>
+            <span>/</span>
+            <Link 
+              href={`/en${path}`}
+              className={`hover:text-black ${lang === 'en' ? 'font-bold' : ''}`}
+            >
+              EN
+            </Link>
+          </div>
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white z-10"

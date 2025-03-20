@@ -12,7 +12,7 @@ export function TranslationWrapper({
   dict 
 }: { 
   children: React.ReactNode
-  dict: Record<string, string>
+  dict: any
 }) {
   return (
     <TranslationContext.Provider value={{ dict }}>

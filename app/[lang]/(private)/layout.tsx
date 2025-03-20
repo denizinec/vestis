@@ -22,10 +22,10 @@ export default async function RootLayout({
   params
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: Locale }>
 }) {
-  const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const { lang } = await params
+  const dict = await getDictionary(lang)
   return (
     <html lang={lang} suppressHydrationWarning>
       <body className={inter.className}>
@@ -37,9 +37,9 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <LoadingProvider>
-            <Navbar />
+            <Navbar dict={dict} />
             <main>{children}</main>
-            <Footer />
+            <Footer dict={dict} />
           </LoadingProvider>
         </ThemeProvider>
         </TranslationWrapper>
