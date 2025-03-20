@@ -37,7 +37,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <LoadingProvider>
-            <Navbar dict={dict} />
+            <Navbar lang={lang} dict={dict} />
             <main>{children}</main>
             <Footer dict={dict} />
           </LoadingProvider>
