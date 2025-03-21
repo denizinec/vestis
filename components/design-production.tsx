@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const DesignProduction = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Design & Production</h2>
@@ -19,14 +19,12 @@ const DesignProduction = () => {
               <h3 className="text-2xl font-bold text-gray-900">Design Statement</h3>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              We believe that flexibility and customization are essential for achieving the best results. Therefore, we collaborate closely with you to develop the most suitable solutions.
-            </p>
+            As Vestis, we see it as our top priority to follow the process and manage the process with experts in order to achieve the best results. Therefore, while following the process, we aim to find the fastest and most suitable solutions by evaluating our customers' design critiques.            </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              In addition to our existing patterns and designs based on the latest trends, we provide custom creations that reflect your vision.
+            In addition to our current patterns and designs based on the latest trends, we provide special creations that reflect your vision.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Most importantly, we combine trends and technology to create garments that meet both your expectations and those of your customers.
-            </p>
+            Most importantly, we combine trends and technology to create garments that meet both your and your customers' expectations.            </p>
           </div>
 
           <div className="bg-gray-50 p-8 rounded-lg">
@@ -42,14 +40,7 @@ const DesignProduction = () => {
             </p>
           </div>
         </div>
-        <div className="text-center">
-          <a
-            href="/design-production"
-            className="inline-block bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors"
-          >
-            Learn More About Our Process
-          </a>
-        </div>
+        
       </div>
     </section>
   );

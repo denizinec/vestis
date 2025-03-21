@@ -2,32 +2,32 @@ const products = [
   {
     id: 1,
     name: 'Outerwear',
-    image: 'https://images.unsplash.com/photo-1620208923217-62e0f24f0f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80',
+    image: '/images/design-production/outerwear.png',
     description: 'Premium outerwear collections combining style, comfort, and technical performance.',
   },
   {
     id: 2,
     name: 'Activewear',
-    image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1027&q=80',
+    image: '/images/design-production/activewear.png',
     description: 'High-performance activewear designed for comfort and functionality during physical activities.',
   },
   {
     id: 3,
     name: 'Workwear',
-    image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
+    image: '/images/design-production/workwear.png',
     description: 'Durable and professional workwear that combines functionality with modern design elements.',
   },
   {
     id: 4,
     name: 'Knitwear',
-    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1072&q=80',
+    image: '/images/design-production/knitwear.png',
     description: 'Innovative knitwear collections featuring the latest trends and technical advancements.',
   },
 ];
 
 const ProductsSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Products</h2>
