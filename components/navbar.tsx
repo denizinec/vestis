@@ -24,12 +24,11 @@ const Navbar = ({ dict }: Props) => {
 
   useEffect(() => {
 
-    // Check if we're on the home page
     const homePage = path === `/${lang}/home`;
     setIsHomePage(homePage);
     
     const handleScroll = () => {
-      // Only track scroll on homepage
+
       setIsScrolled(window.scrollY > 10);
       if (homePage) {
         setIsScrolled(window.scrollY > 10);
@@ -88,16 +87,17 @@ const Navbar = ({ dict }: Props) => {
               href={`/tr${path}`}
               className={`hover:text-black ${lang === 'tr' ? 'font-bold' : ''}`}
             >
-              TR
+              TR 🇹🇷
             </Link>
             <span>/</span>
             <Link 
               href={`/en${path}`}
               className={`hover:text-black ${lang === 'en' ? 'font-bold' : ''}`}
             >
-              EN
+              EN 🇬🇧
             </Link>
           </div>
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white z-10"

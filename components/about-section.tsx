@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const AboutSection = () => {
   return (
@@ -21,32 +22,41 @@ const AboutSection = () => {
             </a>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-square overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581375383680-7101dc5cb5f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
-                alt="Textile production"
-                className="w-full h-full object-cover"
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/certification/organic100.png"
+                alt=""
+                className=" object-contain"
+                width={150}
+                height={150}
               />
             </div>
-            <div className="aspect-square overflow-hidden mt-8">
-              <img
-                src="https://images.unsplash.com/photo-1573521193826-58c7c6466648?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Team collaboration"
-                className="w-full h-full object-cover"
+            
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/certification/recycled100.png"
+                alt=""
+                className=" object-contain"
+                width={250}
+                height={250}
               />
             </div>
-            <div className="aspect-square overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
-                alt="Fabric samples"
-                className="w-full h-full object-cover"
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/certification/sedex.png"
+                alt=""
+                className=" object-contain"
+                width={200}
+                height={200}
               />
             </div>
-            <div className="aspect-square overflow-hidden mt-8">
-              <img
-                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
-                alt="Textile factory"
-                className="w-full h-full object-cover"
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/certification/bci.png"
+                alt=""
+                className=" object-contain"
+                width={200}
+                height={200}
               />
             </div>
           </div>
