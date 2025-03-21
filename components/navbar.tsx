@@ -82,19 +82,19 @@ const Navbar = ({ dict }: Props) => {
             
             
         </nav>
-        <div className="flex space-x-2 text-sm text-white">
+        <div className="flex space-x-3 text-sm text-white">
             <Link 
               href={`/tr${path}`}
-              className={`hover:text-black ${lang === 'tr' ? 'font-bold' : ''}`}
+              className={`hover:text-gray-300 ${lang === 'tr' ? 'font-bold' : ''}`}
             >
-              TR 🇹🇷 ❤️
+              <img  src="/images/flags/tr.png" alt="TR" width={20} height={20} />
             </Link>
             <span>/</span>
             <Link 
               href={`/en${path}`}
-              className={`hover:text-black ${lang === 'en' ? 'font-bold' : ''}`}
+              className={`hover:text-gray-300 ${lang === 'en' ? 'font-bold' : ''}`}
             >
-              EN 🇬🇧
+              <img src="/images/flags/uk.png" alt="EN" width={20} height={20} />
             </Link>
           </div>
 

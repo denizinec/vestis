@@ -21,40 +21,40 @@ const AboutSection = () => {
               Learn more about our story <ArrowRight size={16} className="ml-2" />
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="flex flex-col items-center">
+          <div className="grid grid-cols-2 gap-1">
+            <div className="flex flex-col items-center justify-center">
               <Image
                 src="/images/certification/organic100.png"
                 alt=""
-                className=" object-contain"
-                width={150}
-                height={150}
+                className="object-contain"
+                width={110}
+                height={110}
               />
             </div>
             
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center justify-center">
               <Image
                 src="/images/certification/recycled100.png"
                 alt=""
-                className=" object-contain"
-                width={250}
-                height={250}
-              />
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/certification/sedex.png"
-                alt=""
-                className=" object-contain"
+                className="object-contain"
                 width={200}
                 height={200}
               />
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center justify-center">
+              <Image
+                src="/images/certification/sedex.png"
+                alt=""
+                className="object-contain"
+                width={200}
+                height={200}
+              />
+            </div>
+            <div className="flex flex-col items-center justify-center">
               <Image
                 src="/images/certification/bci.png"
                 alt=""
-                className=" object-contain"
+                className="object-contain"
                 width={200}
                 height={200}
               />
