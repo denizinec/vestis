@@ -9,8 +9,20 @@ import { TranslationWrapper } from '@/components/TranslationWrapper';
 import { Locale } from '@/lib/types'
 import { getDictionary } from '@/lib/dictionary'
 
+import localFont from 'next/font/local';
+
 
 const inter = Inter({ subsets: ['latin'] });
+
+const trinite = localFont({
+  src: [
+    {
+      path: './Trinite.ttf',
+      weight: '400',
+    }
+  ],
+  variable: '--font-trinite',
+});
 
 export const metadata: Metadata = {
   title: 'Textile Company | Premium Textile Solutions',
@@ -28,7 +40,7 @@ export default async function RootLayout({
   const dict = await getDictionary(lang)
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${trinite.variable}`}>
         <TranslationWrapper dict={dict}>
         <ThemeProvider
           attribute="class"

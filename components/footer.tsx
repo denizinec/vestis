@@ -59,11 +59,7 @@ const Footer = ({ dict }: Props) => {
                   {dict.navigation["design-production"]}
                 </Link>
               </li>
-              <li>
-                <Link href={`/${lang}/vestis-textile`} className="text-gray-400 hover:text-white transition-colors">
-                  {dict.navigation.vestis}
-                </Link>
-              </li>
+
               <li>
                 <Link href={`/${lang}/sustainability`} className="text-gray-400 hover:text-white transition-colors">
                   {dict.navigation.sustainability}

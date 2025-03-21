@@ -3,8 +3,8 @@ import { Scissors, Truck, Recycle, Award, Zap, Users } from 'lucide-react';
 const services = [
   {
     icon: <Scissors className="h-10 w-10 text-chart-1" />,
-    title: 'Custom Manufacturing',
-    description: 'Tailored textile solutions designed to meet your specific requirements and specifications.',
+    title: 'Custom Design',
+    description: 'Tailored garment designs that reflect your brand vision and meet market demands.',
   },
   {
     icon: <Truck className="h-10 w-10 text-chart-2" />,
@@ -13,7 +13,7 @@ const services = [
   },
   {
     icon: <Recycle className="h-10 w-10 text-chart-3" />,
-    title: 'Sustainable Practices',
+    title: 'Sustainable Production',
     description: 'Eco-friendly manufacturing processes reducing environmental impact.',
   },
   {
@@ -23,13 +23,13 @@ const services = [
   },
   {
     icon: <Zap className="h-10 w-10 text-chart-5" />,
-    title: 'Innovative Solutions',
-    description: 'Cutting-edge technology and research driving textile innovation.',
+    title: 'R&D Innovation',
+    description: 'Cutting-edge research and development driving textile innovation.',
   },
   {
     icon: <Users className="h-10 w-10 text-chart-1" />,
     title: 'Expert Consultation',
-    description: 'Professional guidance from industry experts to optimize your textile projects.',
+    description: 'Professional guidance from industry experts to optimize your apparel projects.',
   },
 ];
 

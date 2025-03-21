@@ -45,7 +45,6 @@ const Navbar = ({ dict }: Props) => {
     { name: `${dict.navigation.home}`, href: `/${lang}/home` },
     { name: `${dict.navigation.about}`, href: `/${lang}/about` },
     { name: `${dict.navigation["design-production"]}`, href: `/${lang}/design-production` },,
-    { name: `${dict.navigation.vestis}`, href: `/${lang}/vestis-textile` },
     { name: `${dict.navigation.sustainability}`, href: `/${lang}/sustainability` },
     { name: `${dict.navigation.contact}`, href: `/${lang}/contact` },
   ];
