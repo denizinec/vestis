@@ -21,26 +21,27 @@ export default function Page() {
         <>
           <Hero />
           <HomeSection dict={dict} />
-          <Vestis />
+          
           <div>
-            <div className='max-w-5xl mx-auto px-4 mt-16 mb-10 tracking-wider leading-relaxed flex flex-col justify-center items-center'>
-              <h1 className='text-3xl font-medium justify-center items-center mb-10'>Modanın geleceği</h1>
-              <p className='text-gray-500  text-md mb-32'>Moda dünyasında hız, kalite ve esneklik bizim önceliğimiz. Yenilikçi teknolojilerimiz, 
+            <div className='max-w-5xl mx-auto px-4 mb-10 tracking-wider leading-relaxed flex flex-col justify-center items-center'>
+              <h1 className='text-3xl font-bold justify-center items-center mb-10'>Modanın geleceği</h1>
+              <p className='text-gray-500  text-lg mb-32'>Moda dünyasında hız, kalite ve esneklik bizim önceliğimiz. Yenilikçi teknolojilerimiz, 
                 derin sektör bilgimiz ve güçlü üretim altyapımız ile küresel perakendecilere değer katan çözümler sunuyoruz. 
                 Geleceğin modasını bugünden şekillendiriyoruz.
               </p>
 
-              <h1 className='text-xl text-gray-900 font-medium justify-center items-center mb-10 uppercase'>Uzmanlık ve Olmazsa Olmaz Takip</h1>
-              <p className='text-gray-500  text-md '>Üretimin her aşamasında aralıksız olarak kalite kontrol uygulamalarını gerçekleştiriyoruz. Süreci en yakın şekilde takip eden kalite ekibimiz sayesinde, birçok iş kaleminden oluşan tekstil sektörünün gerekliklerinin başında gelen kalite ve müşteri taleplerinin karşılığını maksimum seviyede sunmayı hedefliyoruz. 
+              <h1 className='text-2xl text-gray-900 font-bold justify-center items-center mb-10 uppercase'>Uzmanlık ve Olmazsa Olmaz Takip</h1>
+              <p className='text-gray-500  text-lg '>Üretimin her aşamasında aralıksız olarak kalite kontrol uygulamalarını gerçekleştiriyoruz. Süreci en yakın şekilde takip eden kalite ekibimiz sayesinde, birçok iş kaleminden oluşan tekstil sektörünün gerekliklerinin başında gelen kalite ve müşteri taleplerinin karşılığını maksimum seviyede sunmayı hedefliyoruz. 
 
               </p>
-              <p className='text-gray-500  text-md mt-8'>Kalite ekibimizin üyeleri, nihai ürün elde etme amacıyla her ürünün doğru şekilde tedarik edilmesi, tasarlanması, üretilmesi ve teslim edilmesine yönelik üstün bir çaba harcıyor. Süreç akışının izlenebilirliği ve yerinde kalite denetimleri gibi uygulamalarımız, işimizin başarısına tartışılmaz bir katkı sağlıyor.
+              <p className='text-gray-500  text-lg mt-8 mb-32'>Kalite ekibimizin üyeleri, nihai ürün elde etme amacıyla her ürünün doğru şekilde tedarik edilmesi, tasarlanması, üretilmesi ve teslim edilmesine yönelik üstün bir çaba harcıyor. Süreç akışının izlenebilirliği ve yerinde kalite denetimleri gibi uygulamalarımız, işimizin başarısına tartışılmaz bir katkı sağlıyor.
               </p>
             </div>
           </div>
 
         </>
       )}
+      <Vestis />
       <Certificates />
     </>
   );

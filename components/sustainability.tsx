@@ -46,14 +46,7 @@ const Sustainability = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <a
-            href="/sustainability"
-            className="inline-block bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors"
-          >
-            Learn More About Our Sustainability Efforts
-          </a>
-        </div>
+        
       </div>
     </section>
   );

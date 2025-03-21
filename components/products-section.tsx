@@ -54,7 +54,7 @@ const ProductsSection = () => {
 
         <div className="mt-12 text-center">
           <a
-            href="/products"
+            href="https://www.instagram.com/vestistextile/"
             className="inline-block bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors"
           >
             View All Products

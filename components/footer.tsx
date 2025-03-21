@@ -6,6 +6,8 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'luc
 import { useParams } from 'next/navigation';
 import { Locale } from '@/lib/types';
 import { useTranslation } from './TranslationWrapper';
+import { SiStripe } from 'react-icons/si';
+
 
 type Props = {
   dict: any;
@@ -26,20 +28,14 @@ const Footer = ({ dict }: Props) => {
               </Link>
             </div>
           <p className="text-gray-400 mt-3 mb-3">
-              Leading textile manufacturer providing premium fabrics and innovative solutions since 1995.
+              Leading textile manufacturer providing premium fabrics and innovative solutions since 2022.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/vestistextile/" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
+              <a href="https://www.shopier.com/s/store/VestisTekstil" className="text-gray-400 hover:text-white transition-colors">
+                <SiStripe size={20} />
               </a>
             </div>
           </div>
@@ -82,12 +78,15 @@ const Footer = ({ dict }: Props) => {
               <li className="flex items-start">
                 <MapPin size={18} className="text-gray-400 mr-2 mt-1" />
                 <span className="text-gray-400">
-                  Şenlikköy Mahallesi, Harman Sk. No:19/0 Bakırköy/İstanbul
-                </span>
+                Yakuplu Mah. Hürriyet Bulvarı, Skyport Residence No:1 İç Kapı No:113 Beylikdüzü / İSTANBUL                </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-gray-400 mr-2" />
-                <span className="text-gray-400">+90 212 772 1600</span>
+                <span className="text-gray-400">+90 0212 876 10 61</span>
+              </li>
+              <li className="flex items-center">
+                <Phone size={18} className="text-gray-400 mr-2" />
+                <span className="text-gray-400">+90 532 481 03 46</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-gray-400 mr-2" />
