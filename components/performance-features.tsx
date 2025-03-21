@@ -1,4 +1,5 @@
 import { Droplets, Wind, Shield, Repeat, Feather } from 'lucide-react';
+import Image from 'next/image';
 
 const PerformanceFeatures = () => {
   return (
@@ -11,7 +12,7 @@ const PerformanceFeatures = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white p-8 rounded-lg shadow-sm">
             <h3 className="text-2xl font-bold mb-6 text-gray-900">PERFORMANCE</h3>
             <p className="text-gray-700 mb-6">
@@ -41,6 +42,9 @@ const PerformanceFeatures = () => {
             </ul>
           </div>
 
+          <div className="rounded-2xl shadow-sm">
+            <Image src="/images/design-production/outdoor.png" alt="Performance" width={2500} height={2500} />
+          </div>
           <div className="bg-white p-8 rounded-lg shadow-sm">
             <h3 className="text-2xl font-bold mb-6 text-gray-900">COMFORT</h3>
             <p className="text-gray-700 mb-6">
@@ -84,6 +88,9 @@ const PerformanceFeatures = () => {
                 </div>
               </li>
             </ul>
+          </div>
+          <div className="rounded-lg shadow-sm">
+            <Image src="/images/design-production/comfort.png" alt="comfort" width={2000} height={1500} />
           </div>
         </div>
       </div>

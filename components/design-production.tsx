@@ -33,11 +33,9 @@ const DesignProduction = () => {
               <h3 className="text-2xl font-bold text-gray-900">Production Statement</h3>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Our skilled planning and production team possesses advanced manufacturing knowledge and extensive experience. We utilize the latest technology throughout our production facilities to manufacture, control, and deliver high-quality products to our customers.
-            </p>
+            Our experienced planning and production team uses technological possibilities competently in order to provide our customers with the highest quality products.            </p>
             <p className="text-gray-700 leading-relaxed">
-              We produce performance clothing with various features and technical specifications. The innovative textiles and exclusive collections developed by our in-house R&D Center have become preferred choices for many activewear and knitwear brands.
-            </p>
+            While producing high-quality products with various technical features, we aim to produce innovative designs for collection production with the fastest way possible to meet the requests of our customers.</p>
           </div>
         </div>
         
