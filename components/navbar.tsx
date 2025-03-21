@@ -87,7 +87,7 @@ const Navbar = ({ dict }: Props) => {
               href={`/tr${path}`}
               className={`hover:text-black ${lang === 'tr' ? 'font-bold' : ''}`}
             >
-              TR 🇹🇷
+              TR 🇹🇷 ❤️
             </Link>
             <span>/</span>
             <Link 
