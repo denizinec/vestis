@@ -7,19 +7,19 @@ import { cn } from '@/lib/utils';
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/carousel/1.png',
     title: 'VESTIS VIRUM REDDIT',
     subtitle: 'Shaping the Future of Fashion Today',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80',
+    image: '/images/carousel/2.png',
     title: 'Performance & Innovation',
     subtitle: 'Advanced Technical Apparel for Modern Life',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2027&q=80',
+    image: '/images/carousel/3.png',
     title: 'Sustainable Manufacturing',
     subtitle: 'Creating a Better Tomorrow for Future Generations',
   },

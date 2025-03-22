@@ -26,13 +26,7 @@ const Navbar = ({ dict }: Props) => {
     const homePage = path === `/home`;
     setIsHomePage(homePage);
 
-    if (homePage) {
-      setIsScrolled(window.scrollY > 10);
-    } else {
-      setIsScrolled(true);
-    }
-    
-    const handleScroll = () => {
+    const updateScrollState = () => {
       if (homePage) {
         setIsScrolled(window.scrollY > 10);
       } else {
@@ -40,15 +34,16 @@ const Navbar = ({ dict }: Props) => {
       }
     };
     
+    updateScrollState();
     
-    window.addEventListener('scroll', handleScroll);
-    return () =>  window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', updateScrollState);
+    return () => window.removeEventListener('scroll', updateScrollState);
   }, [path]);
 
   const navLinks = [
     { name: `${dict.navigation.home}`, href: `/${lang}/home` },
     { name: `${dict.navigation.about}`, href: `/${lang}/about` },
-    { name: `${dict.navigation["design-production"]}`, href: `/${lang}/design-production` },,
+    { name: `${dict.navigation["design-production"]}`, href: `/${lang}/design-production` },
     { name: `${dict.navigation.sustainability}`, href: `/${lang}/sustainability` },
     { name: `${dict.navigation.contact}`, href: `/${lang}/contact` },
   ];
@@ -57,14 +52,15 @@ const Navbar = ({ dict }: Props) => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        !isScrolled
-          ? 'bg-transparent' 
-          : 'bg-gray-900/95 backdrop-blur-sm'
-      )
-    }
+        isMobileMenuOpen || isScrolled
+          ? 'bg-gray-900/95' 
+          : !isScrolled
+            ? 'bg-transparent' 
+            : 'bg-gray-900/95 backdrop-blur-sm'
+      )}
     >
       
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between h-40 ">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between h-40">
         
         <Link href="/home" className="relative z-10">
           <Image className='invert' src="/images/logoo2.png" alt="VESTIS" width={250} height={250} />
@@ -91,14 +87,14 @@ const Navbar = ({ dict }: Props) => {
               href={`/tr${path}`}
               className={`hover:text-gray-300 ${lang === 'tr' ? 'font-bold' : ''}`}
             >
-              <img  src="/images/flags/tr.png" alt="TR" width={20} height={20} />
+              <Image  src="/images/flags/tr.png" alt="TR" width={20} height={20} />
             </Link>
             <span>/</span>
             <Link 
               href={`/en${path}`}
               className={`hover:text-gray-300 ${lang === 'en' ? 'font-bold' : ''}`}
             >
-              <img src="/images/flags/uk.png" alt="EN" width={20} height={20} />
+              <Image src="/images/flags/uk.png" alt="EN" width={20} height={20} />
             </Link>
           </div>
 
@@ -112,7 +108,7 @@ const Navbar = ({ dict }: Props) => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-black/95 flex flex-col items-center justify-center md:hidden">
+          <div className="fixed inset-0 bg-gray-900/95 flex flex-col items-center justify-center md:hidden">
             <nav className="flex flex-col items-center space-y-8">
               {navLinks.map((link) => link ? (
                 <Link
@@ -124,7 +120,6 @@ const Navbar = ({ dict }: Props) => {
                   {link.name}
                 </Link>
               ) : null)}
-
             </nav>
           </div>
         )}

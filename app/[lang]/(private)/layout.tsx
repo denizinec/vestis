@@ -25,8 +25,11 @@ const trinite = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Textile Company | Premium Textile Solutions',
-  description: 'Leading textile manufacturer providing high-quality fabrics and innovative textile solutions',
+  title: 'Vestis Textile',
+  icons: {
+    icon: '/images/logo.svg',
+  },
+  description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions',
 };
 
 export default async function RootLayout({
