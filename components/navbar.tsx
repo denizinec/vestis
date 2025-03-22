@@ -83,19 +83,21 @@ const Navbar = ({ dict }: Props) => {
             
         </nav>
         <div className="flex space-x-3 text-sm text-white">
-            <Link 
-              href={`/tr${path}`}
-              className={`hover:text-gray-300 ${lang === 'tr' ? 'font-bold' : ''}`}
-            >
-              <Image  src="/images/flags/tr.png" alt="TR" width={20} height={20} />
-            </Link>
-            <span>/</span>
-            <Link 
-              href={`/en${path}`}
-              className={`hover:text-gray-300 ${lang === 'en' ? 'font-bold' : ''}`}
-            >
-              <Image src="/images/flags/uk.png" alt="EN" width={20} height={20} />
-            </Link>
+            {lang === 'en' ? (
+              <Link 
+                href={`/tr${path}`}
+                className="hover:text-gray-300"
+              >
+                <Image src="/images/flags/tr.png" alt="TR" width={25} height={25} />
+              </Link>
+            ) : (
+              <Link 
+                href={`/en${path}`}
+                className="hover:text-gray-300"
+              >
+                <Image src="/images/flags/uk.png" alt="EN" width={20} height={20} />
+              </Link>
+            )}
           </div>
 
         {/* Mobile Menu Button */}
