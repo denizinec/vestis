@@ -23,15 +23,26 @@ const Navbar = ({ dict }: Props) => {
   const path = pathname.split(`/${lang}`)[1] || '/';
 
   useEffect(() => {
-    const homePage = path === `/${lang}/home`;
+    const homePage = path === `/home`;
     setIsHomePage(homePage);
+
+    if (homePage) {
+      setIsScrolled(window.scrollY > 10);
+    } else {
+      setIsScrolled(true);
+    }
     
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (homePage) {
+        setIsScrolled(window.scrollY > 10);
+      } else {
+        setIsScrolled(true);
+      }
     };
     
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () =>  window.removeEventListener('scroll', handleScroll);
   }, [path]);
 
   const navLinks = [
@@ -46,7 +57,7 @@ const Navbar = ({ dict }: Props) => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        !isScrolled && isHomePage
+        !isScrolled
           ? 'bg-transparent' 
           : 'bg-gray-900/95 backdrop-blur-sm'
       )
