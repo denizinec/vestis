@@ -76,9 +76,11 @@ const Footer = ({ dict }: Props) => {
 
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin size={18} className="text-gray-400 mr-2 mt-1" />
+                <MapPin size={30} className="text-gray-400 mr-2 mt-1" />
                 <span className="text-gray-400">
-                Yakuplu Mah. Hürriyet Bulvarı, Skyport Residence No:1 İç Kapı No:113 Beylikdüzü / İSTANBUL                </span>
+                Yakuplu Mah. Hürriyet Bulvarı, Skyport Residence No:1 İç Kapı No:113 <br /> 
+                Beylikdüzü / İSTANBUL</span>
+                
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-gray-400 mr-2" />
