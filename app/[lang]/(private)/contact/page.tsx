@@ -4,7 +4,7 @@ import { useTranslation } from '@/components/TranslationWrapper'
 import { useState } from 'react'
 
 export default function Page() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  
   const { dict } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',

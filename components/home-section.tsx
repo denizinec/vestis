@@ -1,6 +1,4 @@
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import { useTranslation } from './TranslationWrapper';
+
 
 type Props = {
   dict: any;

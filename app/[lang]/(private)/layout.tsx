@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ['latin'] });
 const trinite = localFont({
   src: [
     {
-      path: './Trinite.ttf',
+      path: '../../../public/fonts/Trinite.ttf',
       weight: '400',
     }
   ],
