@@ -3,30 +3,33 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/components/TranslationWrapper';
 
-const slides = [
-  {
-    id: 1,
-    image: '/images/carousel/1.png',
-    title: 'VESTIS VIRUM REDDIT',
-    subtitle: 'Shaping the Future of Fashion Today',
-  },
-  {
-    id: 2,
-    image: '/images/carousel/2.png',
-    title: 'Performance & Innovation',
-    subtitle: 'Advanced Technical Apparel for Modern Life',
-  },
-  {
-    id: 3,
-    image: '/images/carousel/3.png',
-    title: 'Sustainable Manufacturing',
-    subtitle: 'Creating a Better Tomorrow for Future Generations',
-  },
-];
 
 const Hero = () => {
+  const { dict } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      image: '/images/carousel/1.png',
+      title: dict["hero"]["title"],
+      subtitle: dict["hero"]["subtitle"],
+    },
+    {
+      id: 2,
+      image: '/images/carousel/2.png',
+      title: dict["hero"]["title-2"],
+      subtitle: dict["hero"]["subtitle-2"],
+    },
+    {
+      id: 3,
+      image: '/images/carousel/3.png',
+      title: dict["hero"]["title-3"],
+      subtitle: dict["hero"]["subtitle-3"],
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -66,7 +69,7 @@ const Hero = () => {
           href="/contact"
           className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-200 transition-colors"
         >
-          Discover More <ArrowRight size={16} />
+          {dict["hero"]["discover-more"]} <ArrowRight size={16} />
         </a>
       </div>
 

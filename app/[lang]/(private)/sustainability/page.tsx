@@ -1,7 +1,10 @@
+'use client'
 import Sustainability from '@/components/sustainability';
 import Image from 'next/image';
+import { useTranslation } from '@/components/TranslationWrapper';
 
 export default function Page() {
+  const { dict } = useTranslation();
   return (
     <>
     <div className="flex flex-col min-h-screen pt-40">
@@ -20,7 +23,7 @@ export default function Page() {
                 height={60} 
                 className="mb-4"
               />
-              <p className='text-md font-medium text-center'>SÜRDÜRÜLEBİLİR<br/>ÇEVRE</p>
+              <p className='text-md font-medium text-center uppercase'>{dict["sustainability"]["environmental-responsibility"]}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image 
@@ -30,7 +33,7 @@ export default function Page() {
                 height={60} 
                 className="mb-4"
               />
-              <p className='text-md font-medium text-center'>ÜRÜN SAĞLIĞI VE<br/>GÜVENLİĞİ</p>
+              <p className='text-md font-medium text-center uppercase'>{dict["sustainability"]["product-health-and-safety"]}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image 
@@ -40,7 +43,7 @@ export default function Page() {
                 height={60} 
                 className="mb-4"
               />
-              <p className='text-md font-medium text-center'>SÜRDÜRÜLEBİLİR<br/>TEDARİK ZİNCİRİ</p>
+              <p className='text-md font-medium text-center uppercase'>{dict["sustainability"]["sustainable-supply-chain"]}</p>
             </div>
             
           </div>

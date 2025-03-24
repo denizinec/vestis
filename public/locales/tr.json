@@ -17,13 +17,28 @@
     "cookies": "Çerezler",
     "newsletter": "En son haberlerimizden ve tekliflerimizden haberdar olun, size ulaşalım.",
     "subscribe": "Abone Ol",
-    "email": "Email adresiniz"
+    "email": "Email adresiniz",
+    "vestis-footer": "2022'den beri birinci sınıf kumaşlar ve yenilikçi çözümler sunan lider tekstil üreticisi."
+  },
+  "hero": {
+    "title": "VESTIS VIRUM REDDIT",
+    "subtitle": "Geleceğin Modasını Bugünden Şekillendiriyoruz",
+    "title-2": "Performans & İnovasyon",
+    "subtitle-2": "Modern Hayat İçin İleri Teknoloji Giyim",
+    "title-3": "Sürdürülebilir Üretim",
+    "subtitle-3": "Gelecek Nesillere Daha İyi Bir Gün Yaratıyoruz",
+    "discover-more": "Daha Fazla Keşfet"
   },
   "home": {
     "about": "Vestis Hakkında",
     "a-description-1": "Müşterilerimize en kaliteli malzemeleri sunarak, bunları dünya çapındaki müşterileri için trend belirleyen tasarımlara dönüştürmelerine yardımcı olacak en iyi giyim ürünlerini üretiyoruz.",
     "a-description-2": "Farklı malzemelerden üretilen yenilikçi tasarımlarımızı, en son teknolojiler ve ileri üretim yöntemleriyle geniş bir yelpazede sunuyoruz.",
-    "a-description-3": "Yeniliğe olan bağlılığımızla, Vestis olarak tüm fabrika süreçlerimizi sürekli iyileştirmeye çalışıyoruz. İnsanlara ve çevreye duyduğumuz saygıyla, gelecekteki nesillere olumlu bir etki bırakmak için sürdürülebilirliği benimsiyoruz."
+    "a-description-3": "Yeniliğe olan bağlılığımızla, Vestis olarak tüm fabrika süreçlerimizi sürekli iyileştirmeye çalışıyoruz. İnsanlara ve çevreye duyduğumuz saygıyla, gelecekteki nesillere olumlu bir etki bırakmak için sürdürülebilirliği benimsiyoruz.",
+    "fashion-future": "Modanın Geleceği",
+    "fashion-future-description": "Moda dünyasında hız, kalite ve esneklik bizim önceliğimiz. Yenilikçi teknolojilerimiz, derin sektör bilgimiz ve güçlü üretim altyapımız ile küresel perakendecilere değer katan çözümler sunuyoruz. Geleceğin modasını bugünden şekillendiriyoruz.",
+    "expertise": "Uzmanlık ve Olmazsa Olmaz Takip",
+    "expertise-description": "Üretimin her aşamasında aralıksız olarak kalite kontrol uygulamalarını gerçekleştiriyoruz. Süreci en yakın şekilde takip eden kalite ekibimiz sayesinde, birçok iş kaleminden oluşan tekstil sektörünün gerekliklerinin başında gelen kalite ve müşteri taleplerinin karşılığını maksimum seviyede sunmayı hedefliyoruz.",
+    "expertise-description-1" : "Kalite ekibimizin üyeleri, nihai ürün elde etme amacıyla her ürünün doğru şekilde tedarik edilmesi, tasarlanması, üretilmesi ve teslim edilmesine yönelik üstün bir çaba harcıyor. Süreç akışının izlenebilirliği ve yerinde kalite denetimleri gibi uygulamalarımız, işimizin başarısına tartışılmaz bir katkı sağlıyor."
   },
   "about": {
     "first-look": "Vestis'e ilk bakış",
@@ -33,5 +48,71 @@
     "values-description": "Yenilik, sürekli değişim ve gelişim gibi ilkelerin rehberlik ettiği katılımcı bir kurumsal kültür geliştirmek, vazgeçilmez hedefimizdir. Dinamik ve üretken iş gücümüzün katkılarıyla; ekip ruhumuzu güçlü, kurumsal bağlılık kavramını ise canlı tutmayı başarıyoruz.",
     "quality-sustainability": "Kalite & Sürdürülebilirlik",
     "quality-sustainability-description": "Toplam Kalite İlkemiz ve bilgi güvenliğiyle ilgili katı kurallarımız sayesinde tüm süreçlerimizin %100 güvenli ve en üstün kalitede olması en büyük övünç kaynağımızdır."
+  },
+  "contact": {
+    "name": "Adınız Soyadınız",
+    "email": "Email Adresiniz",
+    "message": "Mesajınız",
+    "telephone": "Telefon Numaranız",
+    "subject": "Konu",
+    "address": "Adres",
+    "send": "Gönder"
+  },
+  "design-production": {
+    "design-production": "Tasarım & Üretim",
+    "description": "Küresel ortaklarımız ve tedarikçilerimizden oluşan ağımızla desteklenen Vestis, Türkiye ve dünyanın önde gelen markaları için yüksek hacimli, zamana duyarlı moda giyim ve koleksiyonların tasarımı ve yüksek teknoloji üretiminde uzmanlaşmıştır.",
+    "design-statement": "Tasarım Beyanı",
+    "production-statement": "Üretim Beyanı",
+    "a-description-1": "Vestis olarak, en iyi sonuçlara ulaşmak için süreci takip etmeyi ve süreci uzmanlarla yönetmeyi en öncelikli görevimiz olarak görüyoruz. Bu nedenle, süreci takip ederken, müşterilerimizin tasarım eleştirilerini değerlendirerek en hızlı ve en uygun çözümleri bulmayı hedefliyoruz.",
+    "a-description-2": "En son trendlere dayalı mevcut kalıplarımız ve tasarımlarımızın yanı sıra, vizyonunuzu yansıtan özel kreasyonlar sunuyoruz.",
+    "a-description-3": "En önemlisi, hem sizin hem de müşterilerinizin beklentilerini karşılayan giysiler yaratmak için trendleri ve teknolojiyi birleştiriyoruz.",
+    "b-description-1": "Deneyimli planlama ve üretim ekibimiz, müşterilerimize en kaliteli ürünleri sunmak için teknolojik imkanları yetkin bir şekilde kullanmaktadır.",
+    "b-description-2": "Çeşitli teknik özelliklere sahip yüksek kaliteli ürünler üretirken, müşterilerimizin taleplerini karşılamak için koleksiyon üretimine yönelik yenilikçi tasarımları mümkün olan en hızlı şekilde üretmeyi hedefliyoruz.",
+    "our-products": "Ürünlerimiz",
+    "view-all": "Tüm Ürünleri Görüntüle",
+    "our-products-description": "Çeşitli endüstrilerin ve uygulamaların ihtiyaçlarını karşılamak üzere tasarlanmış yüksek kaliteli tekstil ürünlerimizi keşfedin.",
+    "outerwear": "Dış Giyim",
+    "outerwear-description": "Stil, konfor ve teknik performansı birleştiren premium dış giyim koleksiyonları.",
+    "activewear": "Spor Giyim",
+    "activewear-description": "Fiziksel aktiviteler sırasında konfor ve işlevsellik için tasarlanmış yüksek performanslı spor giyim.",
+    "workwear": "İş Giyim",
+    "workwear-description": "İşlevselliği modern tasarım unsurlarıyla birleştiren dayanıklı ve profesyonel iş giyim.",
+    "knitwear": "Triko Giyim",
+    "knitwear-description": "En son trendleri ve teknik gelişmeleri içeren yenilikçi triko koleksiyonları.",
+    "technical-excellence": "Teknik Mükemmellik",
+    "technical-excellence-description": "Giysilerimiz, olağanüstü konfor ve işlevsellik sunmak için yenilikçi tasarımı teknik performansla birleştirir.",
+    "performance": "Performans",
+    "performance-description": "Ürettiğimiz yenilikçi tasarımlar, özel kumaşlardan yapılmış olup teknik özellikler sunar.",
+    "advanced-moisture-management": "Gelişmiş Nem Yönetimi",
+    "efficient-air-permeability": "Verimli Hava Geçirgenliği",
+    "tough-and-dynamic": "Dayanıklı ve Dinamik",
+    "stable-in-shape": "Şekil Stabilitesi",
+    "long-lasting-functionality": "Uzun Ömürlü İşlevsellik",
+    "comfort": "Konfor",
+    "comfort-description": "Hareket halindeyken veya ofiste, egzersiz yaparken veya bisiklet sürerken, bu benzersiz giysiler günlük yaşamda rahat hissetmek için özel olarak tasarlanmıştır.",
+    "ultra-stretch": "Ultra Esnek",
+    "ultra-stretch-description": "Giyene hareket özgürlüğü sağlar. Tam esnek özellikler, giysileri çok giyilebilir ve rahat kılar.",
+    "breathable": "Nefes Alabilir",
+    "breathable-description": "Vücut tarafından buharlaşan terin dışarı çıkmasına izin verme yeteneği, böylece tam konfor sağlar.",
+    "moisture-wicking": "Nem Emici",
+    "moisture-wicking-description": "Nem emici giysiler nemi vücuttan uzaklaştırır. Pamuğun aksine çok az su emen yüksek teknoloji polyesterden yapılmıştır.",
+    "lightweight": "Hafif",
+    "lightweight-description": "Gün boyunca taze ve rahat hissedin."
+  },
+  "sustainability": {
+    "sustainability": "Geleceği Sürdür",
+    "description": "Günümüzdeki etkilerimizi biliyoruz ve gelecek nesillere daha iyi bir günü yaratmak için inanıyoruz.",
+    "sustainability-description": "Tüketim ve uygulama sektöründe pozitif bir değer zinciri katkısı sunmak ve sürdürülebilir gelişim desteği için şirketimizin korporat sorumluluğunu benimsiyoruz ve Global Gelişim Hedeflerini uyumluyoruz.",
+    "sustainability-description-2": "Çevreyi koruma ve gelecek nesillere sağlıklı bir günü yaratmak için sürdürülebilir uygulamaları desteklemek için çevreye karşı tutumumuzu benimsiyoruz.",
+    "environmental-responsibility": "Çevresel Sorumluluk",
+    "environmental-responsibility-description": "Çevresel sorumluluğumuzu benimsiyoruz ve sürdürülebilir uygulamaları desteklemek için çevreye karşı tutumumuzu benimsiyoruz.",
+    "sustainable-materials": "Sürdürülebilir Malzemeler",
+    "sustainable-materials-description": "Çevresel sorumluluğumuzu benimsiyoruz ve sürdürülebilir uygulamaları desteklemek için çevreye karşı tutumumuzu benimsiyoruz.",
+    "global-impact": "Küresel Etkiler",
+    "global-impact-description": "Çevresel sorumluluğumuzu benimsiyoruz ve sürdürülebilir uygulamaları desteklemek için çevreye karşı tutumumuzu benimsiyoruz.",
+    "sustainable-environment": "Sürdürülebilir Ortam",
+    "product-health-and-safety": "Ürün Sağlığı ve Güvenliği",
+    "sustainable-supply-chain": "Sürdürülebilir Tedarik Zinciri"
+    
   }
 }

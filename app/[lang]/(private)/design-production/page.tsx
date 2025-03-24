@@ -1,3 +1,5 @@
+'use client'
+import { useTranslation } from '@/components/TranslationWrapper';
 import DesignProduction from '@/components/design-production';
 import PerformanceFeatures from '@/components/performance-features';
 import ProductsSection from '@/components/products-section';

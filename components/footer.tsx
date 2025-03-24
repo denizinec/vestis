@@ -28,7 +28,7 @@ const Footer = ({ dict }: Props) => {
               </Link>
             </div>
           <p className="text-gray-400 mt-3 mb-3">
-              Leading textile manufacturer providing premium fabrics and innovative solutions since 2022.
+              {dict.navigation["vestis-footer"]}
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/vestistextile/" className="text-gray-400 hover:text-white transition-colors">

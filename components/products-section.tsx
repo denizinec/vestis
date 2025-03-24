@@ -1,38 +1,43 @@
-const products = [
-  {
-    id: 1,
-    name: 'Outerwear',
-    image: '/images/design-production/outerwear.png',
-    description: 'Premium outerwear collections combining style, comfort, and technical performance.',
-  },
-  {
-    id: 2,
-    name: 'Activewear',
-    image: '/images/design-production/activewear.png',
-    description: 'High-performance activewear designed for comfort and functionality during physical activities.',
-  },
-  {
-    id: 3,
-    name: 'Workwear',
-    image: '/images/design-production/workwear.png',
-    description: 'Durable and professional workwear that combines functionality with modern design elements.',
-  },
-  {
-    id: 4,
-    name: 'Knitwear',
-    image: '/images/design-production/knitwear.png',
-    description: 'Innovative knitwear collections featuring the latest trends and technical advancements.',
-  },
-];
+import { useTranslation } from '@/components/TranslationWrapper';
+
+
 
 const ProductsSection = () => {
+  const { dict } = useTranslation();
+
+  const products = [
+    {
+      id: 1,
+      name: `${dict["design-production"]["outerwear"]}`,
+      image: '/images/design-production/outerwear.png',
+      description: `${dict["design-production"]["outerwear-description"]}`,
+    },
+    {
+      id: 2,
+      name: `${dict["design-production"]["activewear"]}`,
+      image: '/images/design-production/activewear.png',
+      description: `${dict["design-production"]["activewear-description"]}`,
+    },
+    {
+      id: 3,
+      name: `${dict["design-production"]["workwear"]}`,
+      image: '/images/design-production/workwear.png',
+      description: `${dict["design-production"]["workwear-description"]}`,
+    },
+    {
+      id: 4,
+      name: `${dict["design-production"]["knitwear"]}`,
+      image: '/images/design-production/knitwear.png',
+      description: `${dict["design-production"]["knitwear-description"]}`,
+    },
+  ];
   return (
     <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Products</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">{dict["design-production"]["our-products"]}</h2>
           <p className="max-w-2xl mx-auto text-gray-700">
-            Discover our diverse range of high-quality textiles designed to meet the needs of various industries and applications.
+            {dict["design-production"]["our-products-description"]}
           </p>
         </div>
 
@@ -57,7 +62,7 @@ const ProductsSection = () => {
             href="https://www.instagram.com/vestistextile/"
             className="inline-block bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors"
           >
-            View All Products
+            {dict["design-production"]["view-all"]}
           </a>
         </div>
       </div>
