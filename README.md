@@ -8,6 +8,13 @@ This project is built using the following technologies:
 - **Next.js** - React-based framework
 - **Tailwind CSS** - Modern and flexible CSS framework
 - **Vercel** - Deployment platform
+- **i18n (next-intl or react-intl)** - Dynamic language support
+
+## 🌍 Multi-language Support
+
+The project includes dynamic language switching with JSON-based dictionaries:
+- `en.json` - English translations
+- `tr.json` - Turkish translations
 
 ## 📦 Installation
 
