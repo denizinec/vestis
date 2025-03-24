@@ -11,7 +11,6 @@ export default function Page() {
       <DesignProduction />
       <ProductsSection />
       <PerformanceFeatures />
-      
     </div>
   );
 }

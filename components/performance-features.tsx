@@ -14,7 +14,7 @@ const PerformanceFeatures = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white p-8 rounded-lg shadow-sm">
             <h3 className="text-2xl font-bold mb-6 text-gray-900">{dict["design-production"]["performance"]}</h3>
             <p className="text-gray-700 mb-6">
@@ -92,7 +92,7 @@ const PerformanceFeatures = () => {
             </ul>
           </div>
           <div className="rounded-lg shadow-sm">
-            <Image src="/images/design-production/comfort.png" alt="comfort" width={2000} height={1500} />
+            <Image src="/images/design-production/comfort.png" alt="comfort" width={2000} height={2000} />
           </div>
         </div>
       </div>
