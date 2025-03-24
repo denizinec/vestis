@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     icon: '/images/logo.svg',
   },
   description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions',
+  keywords: 'textile, manufacturing, fabrics, solutions, innovation, quality, sustainability, fashion, design, production, tekstil, üretim, giyim, tasarım, kalite, sürdürülebilirlik, gelecek, vestis tekstil, vestis virum reddit, vestis textile',
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'standard',
+    'max-video-preview': 1000,
+    },
 };
 
 export default async function RootLayout({
