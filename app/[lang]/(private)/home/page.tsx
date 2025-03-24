@@ -22,7 +22,9 @@ export default function Page() {
           <Hero />
           <HomeSection dict={dict} />
           <div className="top-0 w-full h-[180px] flex flex-col  items-center justify-center bg-gray-900 text-white mb-16">
-          <h1 className="text-7xl font-trinite font-medium text-center justify-center items-center">" VESTIS  VIRUM  REDDIT "</h1>
+          <h1 className="text-6xl md:text-7xl sm:text-6xl font-trinite font-medium text-center justify-center items-center">
+            &quot; VESTIS  VIRUM  REDDIT &quot;
+          </h1>
           </div>
           <div>
             <div className='max-w-5xl mx-auto px-4 mb-10 tracking-wider leading-relaxed flex flex-col justify-center items-center'>
