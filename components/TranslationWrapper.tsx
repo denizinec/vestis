@@ -2,7 +2,7 @@
 import { createContext, useContext } from 'react'
 
 type TranslationContextType = {
-  dict: Record<string, string>
+  dict: Record<string, any>
 }
 
 export const TranslationContext = createContext<TranslationContextType | null>(null)
