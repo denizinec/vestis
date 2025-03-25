@@ -1,11 +1,12 @@
 'use client'
 
 import { useTranslation } from '@/components/TranslationWrapper'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
 
 export default function Page() {
-
   const { dict } = useTranslation()
+  const { lang } = useParams()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,25 +14,95 @@ export default function Page() {
     subject: '',
     message: ''
   })
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: false,
+    message: ''
+  })
 
+  useEffect(() => {
+    if (status.submitted || status.error) {
+      const timer = setTimeout(() => {
+        setStatus(prev => ({ ...prev, submitted: false, error: false }));
+      }, 5000); 
+      
+      return () => clearTimeout(timer);
+    }
+  }, [status.submitted, status.error]);
+ 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
-    console.log(formData)
+    
+    try {
+      setStatus({ submitting: true, submitted: false, error: false, message: '' })
+      
+      
+      const response = await fetch(`/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      console.log('Response status:', response.status);
+      
+      const textResponse = await response.text();
+      console.log('Response text:', textResponse);
+      
+      let data;
+      try {
+        data = textResponse ? JSON.parse(textResponse) : {};
+      } catch (error) {
+        console.error('JSON parse hatası:', error);
+        throw new Error(`Sunucudan geçersiz yanıt alındı: ${textResponse.substring(0, 100)}...`);
+      }
+      
+      if (!response.ok) {
+        throw new Error(data.error || `Sunucu hatası: ${response.status}`);
+      }
+      
+      setStatus({
+        submitting: false,
+        submitted: true,
+        error: false,
+        message: data.message || dict.contact?.["success-message"] || 'Mesajınız başarıyla gönderildi!'
+      })
+      
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      })
+      
+    } catch (error) {
+      console.error('Form gönderme hatası:', error);
+      setStatus({
+        submitting: false,
+        submitted: false,
+        error: true,
+        message: error instanceof Error ? error.message : 'Bir hata oluştu'
+      })
+    }
   }
 
   return (
     <>
-    
-      <div className="flex flex-col justify-center items-center md:flex-row gap-8 mt-52 mb-16">
-
-
-        {/* Contact Form */}
+    {(status.submitted || status.error) && (
+          <div className={`top-0 w-full fixed mt-40  p-4 text-center ${status.error ? 'bg-red-500' : 'bg-green-500'} text-white`}>
+            {status.message}
+          </div>
+        )}
+      <div className="flex flex-col justify-center items-center md:flex-row gap-8 mt-60 mb-16">
+        
         <div className="w-full sm:w-2/3 md:w-1/3 border-2 border-gray-500 p-8 mx-4 md:mx-0">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
@@ -41,7 +112,8 @@ export default function Page() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={dict.contact["name"]} 
-                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none uppercase"
+                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none"
+                required
               />
             </div>
             
@@ -52,7 +124,8 @@ export default function Page() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={dict.contact["email"]} 
-                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none uppercase"
+                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none"
+                required
               />
             </div>
             
@@ -63,7 +136,7 @@ export default function Page() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder={dict.contact["telephone"]} 
-                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none uppercase"
+                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none"
               />
             </div>
             
@@ -74,7 +147,7 @@ export default function Page() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder={dict.contact["subject"]} 
-                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none uppercase"
+                className="w-full border-b-2 border-gray-500 py-2 focus:outline-none"
               />
             </div>
             
@@ -84,15 +157,17 @@ export default function Page() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={dict.contact["message"]} 
-                className="w-full border-b-2 border-gray-500 py-2 h-32 focus:outline-none resize-none uppercase"
+                className="w-full border-b-2 border-gray-500 py-2 h-32 focus:outline-none resize-none"
+                required
               ></textarea>
             </div>
             
             <button 
               type="submit" 
-              className="bg-gray-900 text-white px-8 py-3 font-light tracking-wider uppercase"
+              className="bg-gray-900 text-white px-8 py-3 font-light tracking-wider"
+              disabled={status.submitting}
             >
-              {dict.contact["send"]}
+              {status.submitting ? (dict.contact["sending"] || 'GÖNDERİLİYOR...') : dict.contact["send"]}
             </button>
           </form>
         </div>
@@ -103,7 +178,6 @@ export default function Page() {
             <h3 className="text-lg mb-4">TEL</h3>
             <p>+90 212 876 10 61 </p>
             <p>+90 532 481 03 46</p>
-
           </div>
           
           <div className="mb-8">
