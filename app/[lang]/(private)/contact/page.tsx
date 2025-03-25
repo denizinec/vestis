@@ -119,7 +119,7 @@ export default function Page() {
       </div>
 
       <div className="w-full h-[600px]">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d1785.7109993755112!2d28.660367306261538!3d41.00743111884009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x14b55f77f218eab5%3A0x2fb1faa65ca3612b!3m2!1d41.0075058!2d28.6615255!4m5!1s0x14b55f77f218eab5%3A0x2fb1faa65ca3612b!2zWWFrdXBsdSwgSMO8cnJpeWV0IEJsdiwgMzQ1MjQgQmV5bGlrZMO8esO8L8Swc3RhbmJ1bCwgVMO8cmtpeWU!3m2!1d41.0075058!2d28.6615255!5e1!3m2!1str!2sde!4v1742601136126!5m2!1str!2sde" width="100%" height="100%" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d1785.7109993755112!2d28.660367306261538!3d41.00743111884009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x14b55f77f218eab5%3A0x2fb1faa65ca3612b!3m2!1d41.0075058!2d28.6615255!4m5!1s0x14b55f77f218eab5%3A0x2fb1faa65ca3612b!2zWWFrdXBsdSwgSMO8cnJpeWV0IEJsdiwgMzQ1MjQgQmV5bGlrZMO8esO8L8Swc3RhbmJ1bCwgVMO8cmtpeWU!3m2!1d41.0075058!2d28.6615255!5e0!3m2!1str!2sde!4v1742601136126!5m2!1str!2sde" width="100%" height="100%" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </>
