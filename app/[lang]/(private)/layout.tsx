@@ -25,18 +25,57 @@ const trinite = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Vestis Textile',
+  metadataBase: new URL('https://vestistextile.com'),
+  title: {
+    default: 'Vestis Textile | High-Quality Fabrics & Innovative Textile Solutions',
+    template: '%s | Vestis Textile'
+  },
+  description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions for fashion, home, and industrial applications.',
+  keywords: 'textile, manufacturing, fabrics, solutions, innovation, quality, sustainability, fashion, design, production, tekstil, üretim, giyim, tasarım, kalite, sürdürülebilirlik, gelecek, vestis tekstil, vestis virum reddit, vestis textile',
+  authors: [{ name: 'Vestis Textile' }],
+  creator: 'Vestis Textile',
+  publisher: 'Vestis Textile',
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'tr_TR',
+    url: 'https://vestistextile.com',
+    siteName: 'Vestis Textile',
+    title: 'Vestis Textile | High-Quality Fabrics & Innovative Textile Solutions',
+    description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions for fashion, home, and industrial applications.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Vestis Textile',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Vestis Textile | High-Quality Fabrics & Innovative Textile Solutions',
+    description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions.',
+    images: ['/images/twitter-image.jpg'],
+    creator: '@vestistextile',
+  },
   icons: {
     icon: '/images/logo.svg',
+    shortcut: '/images/favicon.ico',
+    apple: '/images/apple-touch-icon.png',
   },
-  description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions',
-  keywords: 'textile, manufacturing, fabrics, solutions, innovation, quality, sustainability, fashion, design, production, tekstil, üretim, giyim, tasarım, kalite, sürdürülebilirlik, gelecek, vestis tekstil, vestis virum reddit, vestis textile',
   robots: {
     index: true,
     follow: true,
-    'max-image-preview': 'standard',
-    'max-video-preview': 1000,
-    },
+    'max-image-preview': 'large',
+    'max-video-preview': -1,
+    'max-snippet': -1,
+  },
 };
 
 export default async function RootLayout({
