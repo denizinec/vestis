@@ -51,16 +51,13 @@ export default function Page() {
         body: JSON.stringify(formData),
       })
       
-      console.log('Response status:', response.status);
       
       const textResponse = await response.text();
-      console.log('Response text:', textResponse);
       
       let data;
       try {
         data = textResponse ? JSON.parse(textResponse) : {};
       } catch (error) {
-        console.error('JSON parse hatası:', error);
         throw new Error(`Sunucudan geçersiz yanıt alındı: ${textResponse.substring(0, 100)}...`);
       }
       
@@ -84,7 +81,6 @@ export default function Page() {
       })
       
     } catch (error) {
-      console.error('Form gönderme hatası:', error);
       setStatus({
         submitting: false,
         submitted: false,

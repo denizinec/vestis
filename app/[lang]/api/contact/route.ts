@@ -1,30 +1,29 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-
+type RouteContext = {
+  params: Promise<{
+    lang: string;
+  }>;
+};
 
 export async function GET(
   request: Request,
-  response: Response,
-  { params }: { params: { lang: string } }
+  context: RouteContext 
 ) {
-  const lang = params.lang;
-  return NextResponse.json({ message: 'API is working!', lang });
+  const { lang } = await context.params; 
+  return NextResponse.json({ message: 'API endpoint', lang });
 }
-
 
 export async function POST(
   request: Request,
-  response: Response,
-  { params }: { params: { lang: string } }
-
+  context: RouteContext 
 ) {
   try {
-    const lang = params.lang;
+    const { lang } = await context.params; 
     const body = await request.json();
     const { name, email, message, phone, subject } = body;
     
-   
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: parseInt(process.env.EMAIL_PORT || '465'),
@@ -38,7 +37,6 @@ export async function POST(
     try {
       await transporter.verify();
     } catch (verifyError) {
-      console.error('SMTP bağlantı hatası:', verifyError);
       const errorMessage = lang === 'tr' 
         ? 'E-posta sunucusuna bağlanılamadı. Lütfen daha sonra tekrar deneyin veya bizimle doğrudan iletişime geçin.'
         : 'Could not connect to email server. Please try again later or contact us directly.';
@@ -76,7 +74,6 @@ export async function POST(
     try {
       await transporter.sendMail(mailOptions);
     } catch (sendError) {
-      console.error('Email gönderme hatası:', sendError);
       const errorMessage = lang === 'tr'
         ? 'E-posta gönderilemedi. Lütfen daha sonra tekrar deneyin.'
         : 'Failed to send email. Please try again later.';
@@ -94,8 +91,7 @@ export async function POST(
     return NextResponse.json({ success: true, message: successMessage });
     
   } catch (error) {
-    console.error('Genel hata:', error);
-    const lang = params.lang;
+    const { lang } = await context.params;
     
     const errorMessage = lang === 'tr'
       ? 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.'
