@@ -1,10 +1,23 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+
+
+
+export async function GET(
+  request: Request,
+  response: Response,
+  { params }: { params: { lang: string } }
+) {
+  const lang = params.lang;
+  return NextResponse.json({ message: 'API is working!', lang });
+}
 
 
 export async function POST(
   request: Request,
+  response: Response,
   { params }: { params: { lang: string } }
+
 ) {
   try {
     const lang = params.lang;
