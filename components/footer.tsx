@@ -22,7 +22,7 @@ const Footer = ({ dict }: Props) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  ">
           {/* Company Info */}
           <div>
-            <div>
+            <div className='flex justify-center items-center'>
               <Link href={`/${lang}/home`}>
                 <Image src="/images/logoo1.png" alt="Vestis Logo" width={250} height={250} className="invert" />
               </Link>
