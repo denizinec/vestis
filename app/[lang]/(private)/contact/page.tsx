@@ -28,11 +28,11 @@ export default function Page() {
   return (
     <>
     
-      <div className="flex flex-col justify-center items-center  md:flex-row gap-8 mt-52 mb-16">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-8 mt-52 mb-16">
 
 
         {/* Contact Form */}
-        <div className="w-1/3 border-2  border-gray-500 p-8">
+        <div className="w-full sm:w-2/3 md:w-1/3 border-2 border-gray-500 p-8 mx-4 md:mx-0">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <input 
@@ -98,7 +98,7 @@ export default function Page() {
         </div>
         
         {/* Contact Information */}
-        <div className="w-full md:w-1/3 bg-gray-900 text-white p-8">
+        <div className="w-full sm:w-2/3 md:w-1/3 bg-gray-900 text-white p-8 mx-4 md:mx-0">
           <div className="mb-8">
             <h3 className="text-lg mb-4">TEL</h3>
             <p>+90 212 876 10 61 </p>
