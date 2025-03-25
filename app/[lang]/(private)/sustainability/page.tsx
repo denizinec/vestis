@@ -11,9 +11,9 @@ export default function Page() {
       <Sustainability />
       <div className='w-full flex justify-center items-center'>
         <Image src="/images/sustainability/sustainability.png" alt="Sustainability" width={2000} height={2000} />
-    </div>
-    <div className='top-0 w-full h-[250px] flex flex-col items-center justify-center bg-white text-gray-600'>
-    <div className="grid grid-cols-3 gap-0 text-gray-500 place-items-center w-[50%] mx-auto">
+      </div>
+      <div className='top-0 w-full py-8 flex flex-col items-center justify-center bg-white text-gray-600'>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 text-gray-500 place-items-center w-full px-4 sm:w-[80%] md:w-[70%] lg:w-[50%] mx-auto">
             
             <div className="flex flex-col items-center">
               <Image 
@@ -47,9 +47,8 @@ export default function Page() {
             </div>
             
           </div>
-          </div>
-    </div>
-      
+        </div>
+      </div>
     </>
   );
 }
