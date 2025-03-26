@@ -92,7 +92,7 @@ const Footer = ({ dict }: Props) => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-gray-400 mr-2" />
-                <span className="text-gray-400">info@vestistextile.com</span>
+                <span className="text-gray-400"> <a href="mailto:info@vestistextile.com">info@vestistextile.com</a></span>
               </li>
             </ul>
           </div>
