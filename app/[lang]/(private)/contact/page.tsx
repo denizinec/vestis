@@ -178,7 +178,7 @@ export default function Page() {
           
           <div className="mb-8">
             <h3 className="text-lg mb-4">EMAIL</h3>
-            <p>info@vestistextile.com</p>
+            <p><a href="mailto:info@vestistextile.com">info@vestistextile.com</a></p>
           </div>
           
           <div>
