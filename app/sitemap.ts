@@ -4,12 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://vestistextile.com'
   
   const staticPages = [
-    '',
+    '/home',
     '/about',
-    '/products',
-    '/services',
+    '/design-production',
+    '/sustainability',
     '/contact',
-    '/blog',
   ]
   
   const languages = ['en', 'tr']
