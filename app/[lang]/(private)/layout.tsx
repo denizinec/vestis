@@ -50,24 +50,17 @@ export const metadata: Metadata = {
     description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions for fashion, home, and industrial applications.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/logoo1.jpg',
         width: 1200,
         height: 630,
         alt: 'Vestis Textile',
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Vestis Textile | High-Quality Fabrics & Innovative Textile Solutions',
-    description: 'Vestis Textile is a leading textile manufacturer providing high-quality fabrics and innovative textile solutions.',
-    images: ['/images/twitter-image.jpg'],
-    creator: '@vestistextile',
-  },
   icons: {
-    icon: '/images/logo.svg',
-    shortcut: '/images/favicon.ico',
-    apple: '/images/apple-touch-icon.png',
+    icon: '/images/logoo1.png',
+    shortcut: '/images/logoo1.png',
+    apple: '/images/logoo1.png',
   },
   robots: {
     index: true,

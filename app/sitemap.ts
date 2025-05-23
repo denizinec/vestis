@@ -5,11 +5,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const staticPages = [
     '',
+    '/home',
     '/about',
-    '/products',
-    '/services',
+    '/design-production',
+    '/sustainability',
     '/contact',
-    '/blog',
+
   ]
   
   const languages = ['en', 'tr']

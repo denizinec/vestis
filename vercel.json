@@ -1,0 +1,6 @@
+{
+    "redirects": [
+      { "source": "/(.*)", "destination": "https://vestistextile.com/$1", "permanent": true }
+    ]
+  }
+  
