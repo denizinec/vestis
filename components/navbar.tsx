@@ -62,7 +62,7 @@ const Navbar = ({ dict }: Props) => {
       
       <div className="container mx-auto px-4 py-4 flex items-center justify-between h-40">
         
-        <Link href="/home" className="relative z-10">
+        <Link href={`/${lang}/home`} className="relative z-10">
           <Image className='invert' src="/images/logoo2.png" alt="VESTIS" width={250} height={250} />
         </Link>
 
